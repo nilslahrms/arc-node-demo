@@ -2,12 +2,12 @@ apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: azure-arc-hypernode-test
-  namespace: arc-node-demo
+  namespace: arc-node-pod
 spec:
-  releaseName: arc-node-demo
+  releaseName: arc-node-pod
   chart:
     git: https://github.com/Azure/arc-node-demo
     ref: master
     path: charts/azure-arc-sample
   values:
-    serviceName: arc-node-demo
+    serviceName: arc-node-pod
