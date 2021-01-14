@@ -6,8 +6,10 @@ metadata:
 spec:
   releaseName: arc-node-pod
   chart:
-    git: https://github.com/Azure/arc-node-demo
+    git: https://github.com/nilslahrms/arc-node-demo
     ref: master
     path: charts/azure-arc-sample
   values:
     serviceName: arc-node-pod
+
+    
