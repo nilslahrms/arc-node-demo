@@ -22,7 +22,7 @@ spec:
         kubernetes.io/arch: amd64
         kubernetes.io/os: linux
       containers:
-      - name: {{.Release.Name}}
+      - name: {{.Release.Name}}-hypernode
         image: liveai.azurecr.io/hypernode:1.0.828-amd64
         imagePullPolicy: IfNotPresent
         ports:
@@ -31,7 +31,7 @@ spec:
           requests:
             memory: "50Mi"
             cpu: "125m"
-      - name: {{.Release.Name}}
+      - name: {{.Release.Name}}-mongodb
         image: mongo:3.6.20-xenial
         imagePullPolicy: IfNotPresent
         ports:
